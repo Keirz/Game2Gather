@@ -1,0 +1,12 @@
+
+
+.cards-games{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0 ,0.08);
+}
+.cards-games Card{
+background-color: aqua;
+}
