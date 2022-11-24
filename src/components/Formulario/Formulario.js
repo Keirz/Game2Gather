@@ -8,17 +8,8 @@ import DropDown from '../DropDown'
 import BotaoForm from '../BotaoForm'
 
 export const Formulario = (props) => {
-/* 
-    const games =[
-        'OverWatch2',
-        'World of Warcraft',
-        'League of Legends',
-        'Call of Duty MW2',
-        'Dota 2',
-        'Final Fantasy XIV',
-        'CS: Global Offensive'
-    ];
- */
+
+    
     const [nome, setNome] = useState('');
     const [position, setPosition] = useState('');
     const [tag, setTag] = useState('');
@@ -56,7 +47,7 @@ export const Formulario = (props) => {
             aoAlterar={valor => setPosition(valor)}/>
             <CampoTexto 
             label="Usertag" 
-            placeholder="Digite o endereço da sua Usertag" 
+            placeholder="Digite a Usertag do seu Discord!" 
             valor={tag}
             aoAlterar={valor => setTag(valor)}/>
             <DropDown 

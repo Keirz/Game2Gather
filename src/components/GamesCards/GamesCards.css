@@ -1,4 +1,4 @@
-
+/* 
 
 .cards-games{
     background-color: #f2f2f2;
@@ -7,6 +7,46 @@
     margin: 80px 0;
     box-shadow: 8px 8px 16px rgba(0, 0, 0 ,0.08);
 }
-.cards-games Card{
+.cards-games .Card{
 background-color: aqua;
+} */
+
+.card-games-body{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.cards-games{
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
+}
+.card-games:first-child{
+    margin: 8px 0;
+}
+
+.card-games h2{
+    font-weight: 700;
+}
+.card-button{
+    margin-bottom: 0;
+    position: flex-end;
+    height: 49px;
+    width: 175px;
+    display: inline;
+    background-color: #6278f7;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    
+}
+.card-button:hover{
+    color: #95ffd4;
 }

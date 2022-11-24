@@ -14,7 +14,8 @@ export const Games = (props) => {
             <div className='players'>
             {props.players.map(player => <PlayerCard 
             corDeFundo={props.corPrimaria}
-            key={player.nome} nome={player.nome} position={player.position} tag={player.tag}/>)}
+            key={player.nome} nome={player.nome} position={player.position} tag={player.tag}
+            />)}
             </div>
         </section>
 

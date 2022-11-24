@@ -1,21 +1,36 @@
 import './GamesCards.css'
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Games } from '../Games/Games';
+import { getValue } from '@testing-library/user-event/dist/utils';
 
-export const GamesCards = () =>{
+export const GamesCards = (props) =>{
+
+/*     const gamesSection = useRef(null)
+
+    const scrollToGame = (elementRef) =>{
+        window.scrollTo(
+            {
+                top: elementRef.current.offsetTop,
+                behavior: "smooth",
+            }
+        )
+    }
+ */
 
     return(
-        <div className='container-fluid cards-games'>
-            <Card className='container-fluid' style={{ width: '18rem', maxWidth:'18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+        <div className='cards-games'>
+            <Card  style={{ width: '18rem', maxWidth:'18rem', backgroundColor: props.corSecundaria }}>
+                <Card.Img variant="top" src={props.imgFundo} />
+                <Card.Body className='card-games-body'>
+                    <Card.Title>{props.nome}</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        {props.descr}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                  {/*   <Button variant="primary" className='card-button' 
+                    onClick={(props) => scrollToGame(Games.ref)}
+                    >Cheque os players!</Button> */}
                 </Card.Body>
             </Card>
 
