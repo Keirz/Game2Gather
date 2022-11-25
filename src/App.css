@@ -1,0 +1,14 @@
+.search{
+    margin: 32px 0;
+    padding: 16px 8px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    background-color: #fae6f5;
+}
+.search h1{
+    margin: 32px;
+    font-weight: 700; 
+    color: #db6ebf;
+    border: 2px solid #ffffff ;
+}

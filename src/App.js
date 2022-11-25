@@ -5,17 +5,22 @@ import GamesCards from './components/GamesCards'
 import Banner from './components/Banner';
 import React, {useState} from 'react';
 import  Games  from './components/Games';
+import data from './components/Infos/data.json'
+import List  from "./components/Infos/";
+import {TextField} from "@material-ui/core";
+import './App.css';
 
 function App() {
 
-  const playersArray =[
+ /*  const playersArray =[
     {
+      id: 1,
       nome: 'Pedro Queiróz',
       position: 'Coach',
       tag: 'https://github.com/Keirz.png',
       game: 'OverWatch2' 
     }
-  ]
+  ] */
 
   const games = [
    {
@@ -26,6 +31,7 @@ function App() {
     descr: 'Do TinderWatch ao Masters! Juntos!'
    },  
     {
+      id: 1,
     nome: 'World of Warcraft',
     corPrimaria: '#82cffa',
     corSecundaria: '#e8f8ff',
@@ -33,6 +39,7 @@ function App() {
     descr: 'Dungeons? Raids? Pugs? Ache aqui!'
    }, 
     {
+      id: 2,
     nome: 'League of Legends',
     corPrimaria: '#A6D157',
     corSecundaria: '#f0f8e2',
@@ -40,6 +47,7 @@ function App() {
     descr: 'Depressão connjunta!'
    }, 
     {
+      id: 3,
     nome: 'Call of Duty MW2',
     corPrimaria: '#e06b69',
     corSecundaria: '#fde7e8',
@@ -47,6 +55,7 @@ function App() {
     descr: 'Violence, speed, momentum, juntos!'
    },  
    {
+    id: 4,
     nome: 'Dota 2',
     corPrimaria: '#db6ebf',
     corSecundaria: '#fae6f5',
@@ -54,6 +63,7 @@ function App() {
     descr: 'Coach? Supp? Cores? Jogue junto!'
    },  
    {
+    id: 5,
     nome: 'CS: Global Offensive',
     corPrimaria: '#ff8a29',
     corSecundaria: '#ffeedf',
@@ -63,7 +73,7 @@ function App() {
   ]
 
  
-  const  [players, setPlayers] = useState(playersArray);
+  const  [players, setPlayers] = useState(data);
   
   const playerAdicionado = (player) =>{
     
@@ -71,43 +81,66 @@ function App() {
                                         // ...players eh a syntaxe para espalhar os players antigos na array
   
     console.log(players)
-    console.log(playersArray) 
     console.log(player)
-    console.log(JSON.stringify(players))
+    console.log(JSON.stringify(data))
   }
+  const [inputTexto, setInputTexto] = useState("");
+    let inputHandler = (e) => {
+      //convertendo o input para lower case para facilitar o query
+      var lowerCase = e.target.value.toLowerCase();
+      setInputTexto(lowerCase);
+    }
   
   return (
     <div className="App">
       <Banner />
       <>
-      <h2 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Cheque os players por jogos:</h2>
+      <h2 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Cheque os nossos Games:</h2>
       <div className='container-fluid' style={{display: 'flex'}}>
         
       {games.map(game =><GamesCards 
-      key={game.nome}
+      key={game.id}
       nome={game.nome}
       imgFundo={game.imgFundo}
       corPrimaria={game.corPrimaria}
       descr={game.descr}
-      corSecundaria={game.corSecundaria}/* 
-      qtd={players.filter(player => player.game === game.nome).length} */
+      corSecundaria={game.corSecundaria}
       />)}
       </div>
+      </>
+      <div className="container-fluid search">
+      <h1 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Procure um Player ou Jogo:</h1>
+      <div className="searchbar container-fluid">
+        <TextField
+        key='serarch'
+          id="outlined-basic"
+          onChange={inputHandler}
+          variant="outlined"
+          fullWidth
+          label="Search"
+        />
+      </div>
+      <List input={inputTexto} />
+    </div>
+      <>
       <Formulario 
         games={games.map(game => game.nome)} 
         addPlayerNovo={ player => playerAdicionado(player)}
       />
- 
       </>
-
+  
+ 
+ 
+     
+        <>
       {games.map(game => <Games 
-      key={game.nome} 
+      key={game.id} 
       nome={game.nome} 
       corPrimaria={game.corPrimaria} 
       corSecundaria={game.corSecundaria}
-    
+      imgFundo={game.imgFundo}
       players={players.filter(player => player.game === game.nome)} /> )}
-      
+      </>
     </div>
   );
 }

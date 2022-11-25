@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import Form from 'react-bootstrap/Form';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import React, { useState } from 'react'
@@ -12,26 +13,31 @@ export const Formulario = (props) => {
     
     const [nome, setNome] = useState('');
     const [position, setPosition] = useState('');
-    const [tag, setTag] = useState('');
+    const [Disctag, setDisctag] = useState('');
     const [game, setGame] = useState('');
+    const [id, setId] = useState('');
 
     const addPlayer = (evento) => {
         evento.preventDefault();
         props.addPlayerNovo({
+            id,
             nome,
             position,
-            tag,
+            Disctag,
             game
         })
        setNome('')
        setGame('')
        setPosition('')
-       setTag('')
+       setDisctag('')
+       setId(previousID =>{
+        return {count: previousID.count+1}
+       })
     }
 
     return (
     <div className="container-fluid formulario">
-        <form onSubmit={addPlayer}>   
+        <Form onSubmit={addPlayer}>   
             <h2>Cadastre seu Usertag e seja chamado no LFG!</h2>       
             <CampoTexto 
             obrigatorio={true} 
@@ -48,8 +54,8 @@ export const Formulario = (props) => {
             <CampoTexto 
             label="Usertag" 
             placeholder="Digite a Usertag do seu Discord!" 
-            valor={tag}
-            aoAlterar={valor => setTag(valor)}/>
+            valor={Disctag}
+            aoAlterar={valor => setDisctag(valor)}/>
             <DropDown 
             obrigatorio={true} 
             label="Escolha seu Game" 
@@ -62,7 +68,7 @@ export const Formulario = (props) => {
             <BotaoForm>
                 Adicionar o Player
             </BotaoForm>
-        </form>
+        </Form>
     </div>
 
     )
