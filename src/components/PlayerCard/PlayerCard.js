@@ -2,7 +2,7 @@ import './PlayerCard.css'
 import React from 'react';
 
 
-export const PlayerCard = ({nome, Disctag, position, corDeFundo, game}) =>{
+export const PlayerCard = ({nome, Disctag, position, corDeFundo, game, tag}) =>{
 
     return(
         <div className='player-card'>

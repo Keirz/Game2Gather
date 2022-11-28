@@ -18,14 +18,14 @@ background-color: aqua;
 }
 .cards-games{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 8px 12px;
     box-sizing: border-box;
     border: none;
     box-shadow: 4px 4px 4px rgba(0, 0, 0 ,0.06);
 }
 .card-games:first-child{
-    margin: 8px 0;
+    margin: 16px 16px;
 }
 
 .card-games h2{

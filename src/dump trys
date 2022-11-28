@@ -1,0 +1,53 @@
+no app js:
+
+ 
+/*   const [count, setCount] = useState(data.length);
+  const [id, setID] = useState(count +1);
+   */
+
+    /*const aumentaOCount = () =>{
+ 
+    var newCount = setCount(count +1);
+    return(
+        
+    setID(newCount),
+    setCount(id)
+    )
+    } */
+
+    /* aumentaOCount(); */
+   /*  setID(players.id => {
+      var newCount = count +1;
+      
+      players.id = newCount;
+     
+      
+    }) */
+
+
+    no list js :
+     /*   <li className='linha' key={item.nome}>Player:{item.nome}, <br/> Jogo:{item.game},<br/> Posição: {item.position},<br/> Discord Tag: {item.Disctag}</li>
+                 */
+
+
+
+     no formulario js:
+     
+    /* 
+  const [count, setCount] = useState(data.length) */
+  /* 
+    const [id, setID] = useState(count +1); */
+
+    /* 
+    const aumentaOCount = () =>{
+
+    var newCount = setCount(count ++1);
+    return(
+        
+    setID(newCount),
+    setCount(id)
+    )
+    } */
+
+      /*  setCount(count+1);
+        setID(count); */

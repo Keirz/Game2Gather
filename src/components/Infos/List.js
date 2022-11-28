@@ -5,13 +5,13 @@ import './List.css'
 import '../PlayerCard/PlayerCard.css'
 
 export const List = (props) => {
-    //create a new array by filtering the original array
+    //creando uma nova array da array antiga com o json
     const filteredData = myData.filter((el) => {
-        //if no input the return the original
+        //if  input nulo devolve a array antiga
         if (props.input === '') {
             return el;
         }
-        //return the item which contains the user input
+        //retorna a pesquisa com o input do usuario comparando com nome de jogo ou player
         else {
             return el.nome.toLowerCase().includes(props.input) || el.game.toLowerCase().includes(props.input)
         }
@@ -23,8 +23,7 @@ export const List = (props) => {
             
             {filteredData.map((item) => (
                 <PlayerCard key={item.nome} nome={item.nome} position={item.position} tag={item.tag} Disctag={item.Disctag} game={item.game} />
-              /*   <li className='linha' key={item.nome}>Player:{item.nome}, <br/> Jogo:{item.game},<br/> Posição: {item.position},<br/> Discord Tag: {item.Disctag}</li>
-                 */
+             
             ))}
            
         </ul>

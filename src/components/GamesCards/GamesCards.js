@@ -1,12 +1,12 @@
-import './GamesCards.css'
-import * as React from "react"
+import './GamesCards.css';
+import  React from "react";
 import Card from 'react-bootstrap/Card';
 
 export const GamesCards = (props) =>{
 
 
     return(
-        <div className='cards-games' key={props.nome}>
+        <div className='container-fluid cards-games' key={props.nome}>
             <Card key={props.nome} style={{ width: '18rem', maxWidth:'18rem', backgroundColor: props.corSecundaria }}>
                 <Card.Img variant="top" src={props.imgFundo} key={props.imgFundo} />
                 <Card.Body className='card-games-body' key={props.nome}>
@@ -16,7 +16,7 @@ export const GamesCards = (props) =>{
                     </Card.Text>
                   {/*   <Button variant="primary" className='card-button' 
                     onClick={(props) => scrollToGame(Games.ref)}
-                    >Cheque os players!</Button> */}
+                    >Cheque os players!</Button> DESNECSSARIO */}
                 </Card.Body>
             </Card>
 

@@ -1,11 +1,12 @@
 import './Games.css'
 import React from 'react'
 import PlayerCard from '../PlayerCard'
+import data from '../Infos/'
 
 
 export const Games = (props) => {
 
-    /* const fundoVar = {backgroundColor: props.corSecundaria};  */
+    /* const fundoVar = {backgroundColor: props.corSecundaria};  */ // criar variavel pro fundo para tornar mais manuseavel
 
     return (
         (props.players.length >0) && // ou ? e : '' no final (ternario)

@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Formulario from './components/Formulario'
-import GamesCards from './components/GamesCards'
-import Banner from './components/Banner';
+import CadastroPlayer from './components/CadastroPlayer';
+import GamesCards from './components/GamesCards';
+import HeaderIMG from './components/HeaderIMG';
 import React, {useState} from 'react';
 import  Games  from './components/Games';
-import data from './components/Infos/data.json'
+import data from './components/Infos/data.json';
 import List  from "./components/Infos/";
 import {TextField} from "@material-ui/core";
 import './App.css';
@@ -74,15 +74,16 @@ function App() {
 
  
   const  [players, setPlayers] = useState(data);
-  
+
   const playerAdicionado = (player) =>{
+   
+    setPlayers(players => [...players, player]) 
+      // adicionando novo player dentro da array com useState
+                                            // ...players eh a syntaxe para espalhar os players antigos na array
     
-    setPlayers(players => [...players, player])   // adicionando novo player dentro da array com useState
-                                        // ...players eh a syntaxe para espalhar os players antigos na array
-  
-    console.log(players)
-    console.log(player)
-    console.log(JSON.stringify(data))
+    console.log(players);
+    console.log(player);
+    console.log(JSON.stringify(players))
   }
   const [inputTexto, setInputTexto] = useState("");
     let inputHandler = (e) => {
@@ -90,15 +91,20 @@ function App() {
       var lowerCase = e.target.value.toLowerCase();
       setInputTexto(lowerCase);
     }
-  
   return (
     <div className="App">
-      <Banner />
-      <>
-      <h2 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Cheque os nossos Games:</h2>
-      <div className='container-fluid' style={{display: 'flex'}}>
+      
+      <div className='img' key='img'>
+      <HeaderIMG key='headerimg' />
+      </div>
+      
+      <div className='h2gamescard'key='h2gamescard'>
+      <h2 key='h2gamescard' style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Cheque os nossos Games:</h2>
+      </div>
+  
+      <div className='container-fluid' style={{display: 'flex'}} key='gamescards'>
         
-      {games.map(game =><GamesCards 
+      {games.map(game =><GamesCards className={game.id}
       key={game.id}
       nome={game.nome}
       imgFundo={game.imgFundo}
@@ -107,9 +113,9 @@ function App() {
       corSecundaria={game.corSecundaria}
       />)}
       </div>
-      </>
-      <div className="container-fluid search">
-      <h1 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: '2px solid #ffffff' }}>Procure um Player ou Jogo:</h1>
+      
+      <div className="container-fluid search" key='search'>
+      <h1 style={{margin: '32px', fontWeight: '700', color: '#db6ebf', border: 'none', alignSelf: 'center' }}>Procure um Player ou Jogo:</h1>
       <div className="searchbar container-fluid">
         <TextField
         key='serarch'
@@ -120,19 +126,15 @@ function App() {
           label="Search"
         />
       </div>
-      <List input={inputTexto} />
+      <List input={inputTexto} corDeFundo={games.corPrimaria} />
     </div>
-      <>
-      <Formulario 
+      <div key='form'>
+      <CadastroPlayer 
+        key='form'
         games={games.map(game => game.nome)} 
-        addPlayerNovo={ player => playerAdicionado(player)}
-      />
-      </>
-  
- 
- 
-     
-        <>
+        addPlayerNovo={ player => playerAdicionado(player)}/>
+      </div>
+      <div key='gamessection'>
       {games.map(game => <Games 
       key={game.id} 
       nome={game.nome} 
@@ -140,7 +142,8 @@ function App() {
       corSecundaria={game.corSecundaria}
       imgFundo={game.imgFundo}
       players={players.filter(player => player.game === game.nome)} /> )}
-      </>
+      <div/>
+      </div>
     </div>
   );
 }

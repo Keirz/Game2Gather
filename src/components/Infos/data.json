@@ -4,49 +4,49 @@
   "nome": "Opalina",
   "position": "DPS",
 "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/141x100.png/ff4444/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "World of Warcraft"
 }, {
   "id": 2,
   "nome": "Freida",
   "position": "Coach",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/196x100.png/5fa2dd/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "OverWatch2"
 }, {
   "id": 3,
   "nome": "Rochette",
   "position": "Tank",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/148x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "World of Warcraft"
 }, {
   "id": 4,
   "nome": "Joanne",
   "position": "AWP",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/162x100.png/5fa2dd/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "CS: Global Offensive"
 }, {
   "id": 5,
   "nome": "Avigdor",
   "position": "Flanker",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/155x100.png/5fa2dd/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "Call of Duty MW2"
 }, {
   "id": 6,
   "nome": "Kellina",
   "position": "Scout",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/241x100.png/dddddd/000000",
+  "tag": "/images/profile.jpg",
   "game": "Call of Duty MW2"
 }, {
   "id": 7,
   "nome": "Daloris",
   "position": "Rifler",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/222x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "Call of Duty MW2"
 }, 
 {
@@ -54,90 +54,90 @@
   "nome": "Offlaner",
   "position": "Eltringham",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/210x100.png/dddddd/000000",
+  "tag": "/images/profile.jpg",
   "game": "Dota 2"
 }, {
   "id": 9,
   "nome": "Dulsea",
   "position": "Coach",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/168x100.png/5fa2dd/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "CS: Global Offensive"
 }, {
   "id": 10,
   "nome": "Stefanie",
   "position": "Rifler",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/132x100.png/5fa2dd/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "CS: Global Offensive"
 }, {
   "id": 11,
   "nome": "Sindee",
   "position": "DPS",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/237x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "World of Warcraft"
 }, {
   "id": 12,
   "nome": "Nixie",
   "position": "Jungle",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/120x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "League of Legends"
 }, {
   "id": 13,
   "nome": "Walden",
   "position": "Coach",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/148x100.png/dddddd/000000",
+  "tag": "/images/profile.jpg",
   "game": "Call of Duty MW2"
 }, {
   "id": 14,
   "nome": "Freemon",
   "position": "Supp",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/228x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "League of Legends"
 }, {
   "id": 15,
   "nome": "Reinwald",
   "position": "Supp",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "League of Legends"
 }, {
   "id": 16,
   "nome": "Gunter",
   "position": "Rifler",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/205x100.png/dddddd/000000",
+  "tag": "/images/profile.jpg",
   "game": "CS: Global Offensive"
 }, {
   "id": 17,
   "nome": "Lindon",
   "position": "Tank",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/124x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "World of Warcraft"
 }, {
   "id": 18,
   "nome": "Julee",
   "position": "Flanker",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/114x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "Call of Duty MW2"
 }, {
   "id": 19,
   "nome":"Tildie",
   "position": "AWP",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/249x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "CS: Global Offensive"
 }, {
   "id": 20,
   "nome": "Gertrud",
   "position": "DPS",
   "Disctag": "Teste#11111",
-  "tag": "http://dummyimage.com/149x100.png/cc0000/ffffff",
+  "tag": "/images/profile.jpg",
   "game": "World of Warcraft"
 }]
